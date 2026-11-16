@@ -1,0 +1,83 @@
+:root {
+  color-scheme: dark;
+  font: 16px/1.5 system-ui, sans-serif;
+  background: #171717;
+  color: #efeee9;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 1096px; margin: auto; padding: 0 24px; }
+
+header, footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+header { padding: 26px 0 21px; }
+h1 {
+  margin: 0;
+  font: italic 500 clamp(2rem, 5vw, 2.7rem)/1.1 Georgia, serif;
+  letter-spacing: -.055em;
+}
+h1 span { color: #d9ad6c; }
+button, footer a, #source { font: 13px/1.5 ui-monospace, monospace; }
+button {
+  color: inherit;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 6px;
+}
+#random { display: inline-flex; align-items: center; gap: 7px; }
+#random span { font: 22px/1 system-ui, sans-serif; }
+[hidden] { display: none !important; }
+a { color: inherit; text-underline-offset: 4px; }
+button:hover, footer a:hover, #source:hover { color: white; text-decoration: underline; }
+:focus-visible { outline: 2px solid #ffd492; outline-offset: 3px; }
+
+.wall { columns: 3; column-gap: 12px; }
+.wall a {
+  display: block;
+  margin-bottom: 12px;
+  break-inside: avoid;
+  border-radius: 5px;
+  cursor: zoom-in;
+}
+.wall img { display: block; width: 100%; height: auto; border-radius: inherit; }
+footer { color: #aaa8a3; padding: 18px 0 28px; }
+footer a { text-decoration: none; }
+
+dialog {
+  border: 0;
+  background: transparent;
+  color: #efeee9;
+  padding: 0;
+  width: min(1000px, calc(100vw - 24px));
+  max-width: calc(100vw - 24px);
+  max-height: calc(100dvh - 16px);
+}
+dialog::backdrop { background: rgb(9 9 9 / 96%); }
+body:has(dialog[open]) { overflow: hidden; }
+.viewer { display: grid; justify-items: center; }
+.viewer form { justify-self: end; margin: 0; }
+.viewer button { margin-bottom: 3px; }
+#full {
+  display: block;
+  width: 100%;
+  height: calc(100dvh - 112px);
+  object-fit: contain;
+}
+#source { margin-top: 12px; color: #c8c7c1; text-align: center; }
+
+@media (max-width: 760px) {
+  main { padding: 0 14px; }
+  .wall { columns: 2; }
+}
+@media (max-width: 540px) {
+  header { padding: 18px 0 16px; }
+  .wall { columns: 1; }
+  footer a { font-size: 11px; }
+}
