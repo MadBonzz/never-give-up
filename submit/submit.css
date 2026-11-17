@@ -1,0 +1,22 @@
+.submission { max-width: 620px; padding: 36px 20px; }
+.back, summary, .publish, #forget { font: 14px/1.5 ui-monospace, monospace; }
+.back { color: #bbb9b3; }
+.submission h1 { margin: 42px 0 28px; }
+.submission label { display: block; margin-bottom: 6px; }
+.submission input:not([type="checkbox"]) {
+  width: 100%; border-radius: 5px; border: 1px solid #67645f;
+  padding: 12px; color: inherit; background: #1c1c1c; font: inherit;
+}
+.hint, details p, .remember { font-size: 14px; color: #bfbbb4; }
+.hint { margin: 7px 0 18px; }
+.publish { border-radius: 4px; background: #efe9dd; color: #171717; padding: 10px 15px; }
+.publish:hover { color: #171717; background: white; }
+.publish:disabled { opacity: .65; cursor: wait; }
+#status { margin: 15px 0; }
+#status[data-error] { color: #ffb4a8; }
+#result img { max-width: 118px; max-height: 118px; margin: 0 7px 7px 0; vertical-align: top; border-radius: 3px; }
+#result a { display: block; width: fit-content; margin-top: 6px; }
+details { border-top: 1px solid #41403e; margin-top: 26px; padding-top: 15px; }
+summary { cursor: pointer; }
+.submission .remember { margin: 12px 0; }
+#forget { padding: 4px 0; text-decoration: underline; }
